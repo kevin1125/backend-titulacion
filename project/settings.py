@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'pagos_mensuales',
     'productos',
     'estado_cuenta',
+    'plan',
+    'crear_pago',
+    'caja'
     
 
 ]
@@ -93,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'djangodb',
         'USER': 'postgres',
-        'PASSWORD': 'anthony',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT': '5432',
     }
