@@ -17,13 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from caja import views
+
 # import users
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('clientes.urls')),
-    path('', include('productos.urls')),
-    path('', include('plan.urls')),
-    path('', include('crear_pago.urls')),
-    path('', include('pagos_mensuales.urls'))
+    # path('admin/', admin.site.urls),
+    # path('', include('clientes.urls')),
+    # path('', include('productos.urls')),
+    # path('', include('plan.urls')),
+    # path('', include('crear_pago.urls')),
+    # path('', include('pagos_mensuales.urls')),
+    path('', views.home, name='home'),
+    path('signup/', views.signup, name='signup'),
+    path('pagos/', views.pagos, name='pagos'),
+    path('cerrarSesion/', views.cerrarSesion, name='cerrarSesion'),
+    path('iniciarSesion/', views.iniciarSesion, name='iniciarSesion'),
+    path('crear/pago/', views.crearPago, name='crearPago'),
 ]
